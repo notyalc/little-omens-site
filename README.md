@@ -56,6 +56,20 @@ Double-click `index.html`. It opens in your browser and works from disk. The for
 
 To update the site later, drag the folder again. Every drop is a new deploy.
 
+## 5b. Or deploy with GitHub Pages (free, no Netlify)
+
+Works because this is plain static files. Two things differ from Netlify:
+
+- **The email form.** GitHub Pages cannot receive form posts, so `formAction: "netlify"` will not work there. Sign up at formspree.io (free tier), create a form, and paste its endpoint into `join.formAction` in `content.js`, e.g. `"https://formspree.io/f/abcdwxyz"`. Mailchimp or Klaviyo form URLs work the same way.
+- **Security headers.** GitHub Pages cannot send custom headers, so the policy from `netlify.toml` is also set as a `<meta>` tag in each page. You lose only the clickjacking and HSTS headers, which matter little for a promo page.
+
+Steps:
+
+1. On a free GitHub account the repo must be **public** for Pages. On GitHub Pro it can stay private.
+2. Repo → Settings → Pages → Source: "Deploy from a branch" → Branch `main`, folder `/ (root)` → Save.
+3. The site appears at `https://<username>.github.io/little-omens-site/` within a minute or two. Every push to `main` redeploys.
+4. Custom domain: in the same Pages settings, enter your domain and follow the DNS instructions (an A or CNAME record at your registrar). Tick "Enforce HTTPS" once it's verified.
+
 ## 6. Connect your domain
 
 In Netlify: Site settings, then Domain management, then Add a domain. Follow the DNS steps it shows for wherever you bought the domain. HTTPS turns on automatically.
