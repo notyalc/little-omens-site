@@ -1,0 +1,4 @@
+.DS_Store
+Thumbs.db
+# keep your real photos out of git if you prefer to upload them only to the host
+# images/*.jpg

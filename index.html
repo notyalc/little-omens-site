@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>little omens</title>
+<meta name="description" content="a new ball-jointed doll studio. something small is coming.">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta property="og:title" content="little omens">
+<meta property="og:description" content="a new ball-jointed doll studio. something small is coming.">
+<meta property="og:image" content="images/og.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="sky" aria-hidden="true"></div>
+<div class="stars" aria-hidden="true"></div>
+<div class="bubbles" id="bubbles" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"><span class="lbl">open</span></div>
+
+<nav class="glass">
+  <a class="brand" href="#top" aria-label="little omens home"><svg width="26" height="26" viewBox="0 0 120 120" aria-hidden="true"><defs><linearGradient id="lo-body" x1="20%" y1="10%" x2="85%" y2="95%"><stop offset="0" stop-color="#EDE6FF"/><stop offset=".35" stop-color="#B9A3FA"/><stop offset=".75" stop-color="#7A56D6"/><stop offset="1" stop-color="#3E2A7A"/></linearGradient><radialGradient id="lo-spec" cx="34%" cy="26%" r="40%"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset=".5" stop-color="#fff" stop-opacity=".18"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient><radialGradient id="lo-shade" cx="70%" cy="80%" r="60%"><stop offset=".55" stop-color="#1a1030" stop-opacity="0"/><stop offset="1" stop-color="#1a1030" stop-opacity=".55"/></radialGradient><radialGradient id="lo-blush" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#F3C6FF" stop-opacity=".9"/><stop offset="1" stop-color="#F3C6FF" stop-opacity="0"/></radialGradient><linearGradient id="lo-star" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#C4B5FD"/></linearGradient><mask id="lo-cres"><rect width="120" height="120" fill="#fff"/><circle cx="80" cy="46" r="39" fill="#000"/></mask><filter id="lo-shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#000" flood-opacity=".55"/><feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#A78BFA" flood-opacity=".35"/></filter></defs><g filter="url(#lo-shadow)"><g mask="url(#lo-cres)"><circle cx="58" cy="60" r="46" fill="url(#lo-body)"/><circle cx="58" cy="60" r="46" fill="url(#lo-shade)"/><circle cx="58" cy="60" r="46" fill="url(#lo-spec)"/><circle cx="58" cy="60" r="45.2" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="1.4"/></g><ellipse cx="34" cy="38" rx="9" ry="5" fill="#fff" opacity=".9" transform="rotate(-32 34 38)"/><ellipse cx="27" cy="74" rx="8" ry="5.5" fill="url(#lo-blush)"/><path d="M27 58q5 4 10 0" stroke="#1B1230" stroke-width="3.2" fill="none" stroke-linecap="round"/><path d="M45 66q5 4 10 0" stroke="#1B1230" stroke-width="3.2" fill="none" stroke-linecap="round"/><path d="M36 80q4 3 8 0" stroke="#1B1230" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M96 14l3.2 8.8 8.8 3.2-8.8 3.2-3.2 8.8-3.2-8.8-8.8-3.2 8.8-3.2z" fill="url(#lo-star)"/><circle cx="108" cy="46" r="2.4" fill="#fff" opacity=".85"/></g></svg><span data-t="brand.name"></span></a>
+  <div class="links"><a href="#story">the doll</a><a href="#gallery">gallery</a><a href="#omens">omens</a></div>
+  <a class="cta" href="#join">join the list</a>
+</nav>
+
+<header class="hero" id="top">
+  <div class="top">
+    <h1 id="h1"></h1>
+    <div class="side"><b><span data-t="drop.label"></span> · <span data-t="drop.dollName"></span></b>resin ball-jointed doll, hand-cast in a small run. preorders open <span data-t="drop.date"></span>.</div>
+  </div>
+  <div class="stage">
+    <div class="chip c1 glass" data-float="18"><span class="dot"></span><span data-t="drop.label"></span></div>
+    <div class="chip c2 glass" data-float="-26"><span data-t="drop.scale"></span></div>
+    <div class="chip c3 glass" data-float="22">hand-painted faceup</div>
+    <div class="chip c4 glass" data-float="-16">preorders <span data-t="drop.date"></span></div>
+    <figure class="plate arch" data-photo="hero" data-depth="-0.06">
+      <div class="backdrop"></div><div class="key"></div><div class="shadow"></div><div class="subject"></div>
+      <img alt="" class="photo">
+      <figcaption class="cap"><b>01</b> · <span data-cap="hero"></span></figcaption>
+    </figure>
+  </div>
+  <div class="bottom">
+    <p data-t="statement.full"></p>
+    <div class="count" id="count" aria-label="time until preorders open">
+      <span class="glass">--<small>days</small></span><span class="glass">--<small>hrs</small></span><span class="glass">--<small>min</small></span>
+    </div>
+  </div>
+</header>
+
+<div class="marquee glass" aria-hidden="true"><div class="track" id="marquee"></div></div>
+
+<section class="story" id="story">
+  <div class="pin">
+    <figure class="plate" data-photo="fig3" id="storyPlate">
+      <div class="backdrop"></div><div class="key"></div><div class="shadow"></div><div class="subject"></div>
+      <img alt="" class="photo">
+      <figcaption class="cap"><b>02</b> · <span data-cap="fig3"></span></figcaption>
+    </figure>
+  </div>
+  <div class="steps" id="steps">
+    <div class="step"><div class="k"><i></i>sculpt</div><h2>every joint sculpted by hand.</h2><p>she is test-posed a hundred times before a mold is ever made. if a knee can't hold a pose, we start the knee again.</p></div>
+    <div class="step"><div class="k"><i></i>cast</div><h2>cast to order, never to a shelf.</h2><p>small-batch resin, poured after the window closes. nothing sits yellowing in a warehouse waiting for you.</p></div>
+    <div class="step"><div class="k"><i></i>faceup</div><h2>painted, sealed, photographed.</h2><p>each face is painted by hand and sealed in layers. you see your doll's actual face before it ships.</p></div>
+  </div>
+</section>
+
+<section class="gal" id="gallery">
+  <div class="head rv"><h2>closer.</h2><div class="k">swipe →</div></div>
+  <div class="rail">
+    <figure class="plate" data-photo="fig2"><div class="backdrop"></div><div class="key"></div><div class="shadow"></div><div class="subject"></div><img alt="" class="photo"><figcaption class="cap"><b>03</b> · <span data-cap="fig2"></span></figcaption></figure>
+    <figure class="plate" data-photo="fig4"><div class="backdrop"></div><div class="key"></div><div class="shadow"></div><div class="subject"></div><img alt="" class="photo"><figcaption class="cap"><b>04</b> · <span data-cap="fig4"></span></figcaption></figure>
+    <figure class="plate" data-photo="fig5"><div class="backdrop"></div><div class="key"></div><div class="shadow"></div><div class="subject"></div><img alt="" class="photo"><figcaption class="cap"><b>05</b> · <span data-cap="fig5"></span></figcaption></figure>
+  </div>
+</section>
+
+<section class="spec rv" id="drop">
+  <div class="card glass">
+    <div>
+      <div class="k" data-t="drop.label"></div>
+      <h2 data-t="drop.dollName"></h2>
+      <p class="lede" data-t="drop.intro"></p>
+    </div>
+    <table id="specs"></table>
+  </div>
+</section>
+
+<section class="roster rv" id="omens">
+  <div class="head">
+    <div><div class="k" data-t="roster.kicker"></div><h2 data-t="roster.title"></h2></div>
+    <p class="lede" data-t="roster.lede"></p>
+  </div>
+  <div class="tiles" id="roster"></div>
+</section>
+
+<section class="join-wrap rv" id="join">
+  <div class="box glass">
+    <div class="k" data-t="join.kicker"></div>
+    <h2 data-t="join.title"></h2>
+    <p class="lede" data-t="join.lede"></p>
+    <form class="join glass" id="join-form" name="waitlist" method="POST">
+      <label class="hp" aria-hidden="true">leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+      <input type="email" name="email" placeholder="your@email" aria-label="Email address" autocomplete="email" required>
+      <button type="submit">notify me</button>
+    </form>
+    <div class="fine"><span data-t="join.fine"></span> <a href="privacy.html">privacy</a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="mark" data-t="brand.name"></div>
+  <div class="row">
+    <div>© <span data-t="brand.year"></span> <span data-t="brand.name"></span> · <span data-t="brand.city"></span></div>
+    <div class="legal"><a href="privacy.html">privacy</a></div>
+    <div id="social"></div>
+  </div>
+</footer>
+
+<script src="content.js"></script>
+<script src="site.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>privacy · little omens</title>
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>
+.doc{max-width:680px;margin:0 auto;padding:120px 24px 100px}
+.doc h1{font-family:var(--display);font-weight:800;font-size:clamp(40px,6vw,72px);letter-spacing:-.03em;line-height:.95;margin:8px 0 28px}
+.doc h2{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--bone-dim);margin:36px 0 10px;font-family:var(--mono);font-weight:500}
+.doc p,.doc li{color:var(--bone);max-width:62ch}
+.doc ul{padding-left:20px}
+.doc a{color:var(--lav)}
+.doc .back{display:inline-block;margin-top:40px;color:var(--bone-dim);text-decoration:none;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<nav>
+  <a class="brand" href="/" aria-label="little omens home"><svg width="22" height="22" viewBox="0 0 72 72" aria-hidden="true"><path d="M36 10 a26 26 0 1 0 0 52 a20 20 0 1 1 0 -52z" fill="#B9B3CC"></path><circle cx="52" cy="20" r="3.5" fill="#E63946"></circle></svg><span>little omens</span></a>
+</nav>
+<main class="doc">
+  <div class="k">privacy</div>
+  <h1>what we keep, and why.</h1>
+  <p>this site is run by <span data-t="legal.entity"></span> in <span data-t="legal.country"></span>. it does one thing: tells you about our dolls and lets you leave an email address so we can tell you when one goes on sale. last updated <span data-t="legal.updated"></span>.</p>
+
+  <h2>what we collect</h2>
+  <ul>
+    <li><strong>your email address</strong>, only if you type it into the waitlist form.</li>
+    <li><strong>standard server logs</strong> kept by our hosting provider, netlify, which include your ip address, browser type, and the pages you load. we do not combine these with your email.</li>
+  </ul>
+
+  <h2>what we do not do</h2>
+  <ul>
+    <li>no advertising cookies, no tracking pixels, no analytics scripts. this site sets no cookies at all.</li>
+    <li>we never sell, rent, or share your email address with anyone else.</li>
+  </ul>
+
+  <h2>why we use it</h2>
+  <p>to send you a small number of emails about our dolls: when a preorder window opens, when it closes, and occasional studio news. that is the legal basis of your consent, which you give by submitting the form.</p>
+
+  <h2>where it lives</h2>
+  <p>form submissions are stored by netlify (united states) and, if we connect one, by our email service provider. fonts load from google fonts, which means google receives your ip address when the page loads.</p>
+
+  <h2>how long</h2>
+  <p>until you unsubscribe or ask us to delete it. every email we send includes an unsubscribe link.</p>
+
+  <h2>your rights</h2>
+  <p>you can ask what we hold about you, ask us to correct it, or ask us to delete it. email <a data-t-href="legal.contactEmail" href="#"><span data-t="legal.contactEmail"></span></a> and we will do it within 30 days. if you are in the eu, uk, or california you have additional rights under gdpr, uk gdpr, or ccpa, and we honor them.</p>
+
+  <h2>children</h2>
+  <p>our dolls are collectibles for adults. we do not knowingly collect information from anyone under 16.</p>
+
+  <h2>changes</h2>
+  <p>if this page changes in a way that matters, we will say so in the next email we send.</p>
+
+  <a class="back" href="/">← back to the studio</a>
+</main>
+<script src="content.js"></script>
+<script>
+(function(){
+  var C=window.CONTENT||{}, L=C.legal||{};
+  L.updated = L.updated || "[DATE]";
+  function get(p){ return p.split('.').reduce(function(o,k){return o==null?undefined:o[k];}, C); }
+  function fill(el,v){ if(v==null)return; var s=String(v); if(/\[[^\]]+\]/.test(s)){ el.innerHTML=s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/\[[^\]]+\]/g,function(m){return '<span class="ph">'+m+'</span>';}); } else el.textContent=s; }
+  document.querySelectorAll('[data-t]').forEach(function(el){ fill(el,get(el.getAttribute('data-t'))); });
+  document.querySelectorAll('[data-t-href]').forEach(function(el){ var v=get(el.getAttribute('data-t-href')); if(v && !/\[/.test(v)) el.href='mailto:'+v; });
+})();
+</script>
+</body>
+</html>
